@@ -18,7 +18,7 @@ RUN apk add --update \
   build-base \
   wget \
   && update-ca-certificates \
-  && rm /var/cache/apk/*
+  && rm /var/cache/apk/* \
   && pip install virtualenv
 
 # install Googla Cloud SDK
