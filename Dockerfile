@@ -6,7 +6,10 @@ RUN apk add --update \
   ca-certificates \
   openssl \
   python \
+  python-dev \
   py-pillow \
+  py-pip \
+  build-base \
   wget \
   && update-ca-certificates \
   && rm /var/cache/apk/*
