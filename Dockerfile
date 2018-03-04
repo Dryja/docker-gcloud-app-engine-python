@@ -3,8 +3,14 @@ MAINTAINER Serg Baburin <docker@babur.in>
 
 # prepare requirements
 RUN apk add --update \
+  bash \
   ca-certificates \
   openssl \
+  curl \
+  git \
+  libffi-dev \
+  make \
+  openssl-dev \
   python \
   python-dev \
   py-pillow \
@@ -13,6 +19,7 @@ RUN apk add --update \
   wget \
   && update-ca-certificates \
   && rm /var/cache/apk/*
+  && pip install virtualenv
 
 # install Googla Cloud SDK
 RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.zip \
